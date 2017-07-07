@@ -2,9 +2,11 @@ Shopping cart
 =============
 1. ##### Install Node & NPM
   Install node and npm for your OS. 
+
 2. ##### Installing Compass
   Follow the instruction in the link to install Compass
   http://compass-style.org/install/
+  
 3. ##### Installing Grunt
   npm install -g grunt-cli
 
