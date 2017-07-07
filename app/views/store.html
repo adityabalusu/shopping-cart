@@ -1,0 +1,41 @@
+<table class="table table-bordered">
+  <tr class="well">
+    <td class="tdRight" colspan="4" >
+      <a href="#/cart" title="go to shopping cart"
+
+         ng-disabled="cart.getTotalCount() < 1">
+        <i class="icon-shopping-cart" />
+        <b>{{cart.getTotalCount()}}</b> items,
+        <b>{{cart.getTotalPrice() | currency}}</b>
+      </a>
+    </td>
+  </tr>
+
+  <tr ng-repeat="product in products | orderBy:'name' | filter:search" >
+    <td>
+      <a href="#/items/{{product.id}}"><b>{{product.name}}</b></a>
+    </td>
+    <td class="tdRight">
+      {{product.price | currency}}
+    </td>
+    <td class="tdCenter">
+      <a href="" 
+
+       ng-click="cart.addItem(product.id, product.name, product.price, 1)">
+         add to cart
+      </a>
+    </td>
+  </tr>
+
+  <tr class="well">
+    <td class="tdRight" colspan="4">
+      <a href="#/cart" title="go to shopping cart"
+
+         ng-disabled="cart.getTotalCount() < 1">
+         <i class="icon-shopping-cart" />
+         <b>{{cart.getTotalCount()}}</b> items,
+         <b>{{cart.getTotalPrice() | currency}}</b>
+      </a>
+    </td>
+  </tr>
+</table>
